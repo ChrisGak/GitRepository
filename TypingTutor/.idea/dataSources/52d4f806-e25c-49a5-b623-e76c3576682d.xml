@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="postgres@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.7">
+    <root id="1"/>
+    <database id="2" parent="1" name="postgres">
+      <ObjectId>12938</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <role id="3" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="4" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="5" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="6" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="7" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="8" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="9" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-12-13.22:16:21.117</IntrospectionTimestamp>
+      <Current>1</Current>
+    </schema>
+    <schema id="10" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="11" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="12" parent="2" name="pg_temp_1">
+      <ObjectId>11736</ObjectId>
+    </schema>
+    <schema id="13" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11737</ObjectId>
+    </schema>
+    <schema id="14" parent="2" name="information_schema">
+      <ObjectId>12648</ObjectId>
+    </schema>
+    <schema id="15" parent="2" name="typingTutor">
+      <ObjectId>16393</ObjectId>
+      <IntrospectionTimestamp>2017-12-13.22:23:06.085</IntrospectionTimestamp>
+      <IntrospectionStateNumber>600</IntrospectionStateNumber>
+      <Visible>1</Visible>
+    </schema>
+    <table id="16" parent="15" name="exercises">
+      <ObjectId>16409</ObjectId>
+      <StateNumber>599</StateNumber>
+    </table>
+    <table id="17" parent="15" name="levels">
+      <ObjectId>16404</ObjectId>
+      <StateNumber>598</StateNumber>
+    </table>
+    <table id="18" parent="15" name="statistics">
+      <ObjectId>16437</ObjectId>
+      <StateNumber>600</StateNumber>
+    </table>
+    <table id="19" parent="15" name="users">
+      <ObjectId>16394</ObjectId>
+      <Comment>users: admins and users</Comment>
+      <StateNumber>587</StateNumber>
+    </table>
+    <table id="20" parent="15" name="zones">
+      <ObjectId>16470</ObjectId>
+      <StateNumber>595</StateNumber>
+    </table>
+    <column id="21" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>568</StateNumber>
+    </column>
+    <column id="22" parent="16" name="text">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>568</StateNumber>
+    </column>
+    <column id="23" parent="16" name="levelId">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>569</StateNumber>
+    </column>
+    <column id="24" parent="16" name="name">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>599</StateNumber>
+    </column>
+    <index id="25" parent="16" name="exercises_pkey">
+      <ObjectId>16415</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="26" parent="16" name="exercises_pkey">
+      <ObjectId>16416</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>exercises_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="27" parent="16" name="levelId">
+      <ObjectId>16417</ObjectId>
+      <ColNames>levelId</ColNames>
+      <RefTableId>16404</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>levels</RefTableName>
+      <RefKeyName>Level_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="28" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>566</StateNumber>
+    </column>
+    <column id="29" parent="17" name="minimumSpeed">
+      <Position>2</Position>
+      <DataType>double precision|0</DataType>
+      <StateNumber>596</StateNumber>
+    </column>
+    <column id="30" parent="17" name="allowableErrorsPercent">
+      <Position>3</Position>
+      <DataType>double precision|0</DataType>
+      <StateNumber>566</StateNumber>
+    </column>
+    <column id="31" parent="17" name="zone">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>595</StateNumber>
+    </column>
+    <index id="32" parent="17" name="Level_pkey">
+      <ObjectId>16407</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="33" parent="17" name="Level_pkey">
+      <ObjectId>16408</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>Level_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="34" parent="17" name="level_zone_fkey">
+      <ObjectId>16478</ObjectId>
+      <ColNames>zone</ColNames>
+      <RefTableId>16470</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>zones</RefTableName>
+      <RefKeyName>zones_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="35" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>576</StateNumber>
+    </column>
+    <column id="36" parent="18" name="exerciseId">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>576</StateNumber>
+    </column>
+    <column id="37" parent="18" name="date">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <StateNumber>576</StateNumber>
+    </column>
+    <column id="38" parent="18" name="errorsPercent">
+      <Position>4</Position>
+      <DataType>double precision|0</DataType>
+      <StateNumber>576</StateNumber>
+    </column>
+    <column id="39" parent="18" name="elapsedTime">
+      <Position>5</Position>
+      <DataType>double precision|0</DataType>
+      <StateNumber>576</StateNumber>
+    </column>
+    <column id="40" parent="18" name="username">
+      <Position>6</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>584</StateNumber>
+    </column>
+    <column id="41" parent="18" name="IsSuccess">
+      <Position>7</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>597</StateNumber>
+    </column>
+    <column id="42" parent="18" name="averageSpeed">
+      <Position>8</Position>
+      <DataType>double precision|0</DataType>
+      <StateNumber>600</StateNumber>
+    </column>
+    <index id="43" parent="18" name="statistics_pkey">
+      <ObjectId>16440</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="44" parent="18" name="statistics_pkey">
+      <ObjectId>16441</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>statistics_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="45" parent="18" name="statistics_exerciseId_fkey">
+      <ObjectId>16442</ObjectId>
+      <ColNames>exerciseId</ColNames>
+      <RefTableId>16409</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>exercises</RefTableName>
+      <RefKeyName>exercises_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="46" parent="18" name="statistics_username_fkey">
+      <ObjectId>16452</ObjectId>
+      <ColNames>username</ColNames>
+      <RefTableId>16394</RefTableId>
+      <RefColPositions>4</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>login</RefColNames>
+    </foreign-key>
+    <column id="47" parent="19" name="password">
+      <Position>1</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>561</StateNumber>
+    </column>
+    <column id="48" parent="19" name="isAdmin">
+      <Position>3</Position>
+      <DataType>boolean|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>558</StateNumber>
+    </column>
+    <column id="49" parent="19" name="login">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>586</StateNumber>
+    </column>
+    <column id="50" parent="19" name="lastActivityDate">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+      <StateNumber>563</StateNumber>
+    </column>
+    <column id="51" parent="19" name="currentLevel">
+      <Position>6</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>564</StateNumber>
+    </column>
+    <index id="52" parent="19" name="users_pkey">
+      <ObjectId>16450</ObjectId>
+      <ColNames>login</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="53" parent="19" name="users_pkey">
+      <ObjectId>16451</ObjectId>
+      <ColNames>login</ColNames>
+      <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="54" parent="19" name="users_currentLevel_fkey">
+      <ObjectId>16432</ObjectId>
+      <ColNames>currentLevel</ColNames>
+      <RefTableId>16404</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>levels</RefTableName>
+      <RefKeyName>Level_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="55" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>594</StateNumber>
+    </column>
+    <column id="56" parent="20" name="symbols">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>594</StateNumber>
+    </column>
+    <index id="57" parent="20" name="zones_pkey">
+      <ObjectId>16476</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="58" parent="20" name="zones_pkey">
+      <ObjectId>16477</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>zones_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

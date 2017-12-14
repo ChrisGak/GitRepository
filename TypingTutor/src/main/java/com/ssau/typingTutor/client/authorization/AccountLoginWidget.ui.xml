@@ -1,0 +1,19 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+        <section class="area">
+            <div class="container">
+                <div class="subscribe">
+                    <h3>Войти</h3>
+                    <form class="form-inline">
+
+                        <div class="form-group">
+                            <input type="text" class="form-control rounded" id="login" placeholder="Логин..."/>
+                            <input type="password" class="form-control rounded" id="password" placeholder="Пароль..."/>
+                            <button id="log_into" type="submit" class="btn btn-primary rounded">Войти</button>
+                        </div>
+                        <button id="register" type="submit" class="btn btn-primary rounded">Регистрация</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+</ui:UiBinder>

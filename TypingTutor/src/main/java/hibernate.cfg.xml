@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/postgres</property>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <mapping class="com.ssau.typingTutor.server.entities.EntitySourceExercisesEntity"/>
+        <mapping resource="com/ssau/typingTutor/server/entities/EntitySourceExercisesEntity.hbm.xml"/>
+        <mapping resource="com/ssau/typingTutor/server/entities/EntitySourceLevelsEntity.hbm.xml"/>
+        <mapping class="com.ssau.typingTutor.server.entities.EntitySourceLevelsEntity"/>
+        <mapping class="com.ssau.typingTutor.server.entities.EntitySourceStatisticsEntity"/>
+        <mapping resource="com/ssau/typingTutor/server/entities/EntitySourceStatisticsEntity.hbm.xml"/>
+        <mapping class="com.ssau.typingTutor.server.entities.EntitySourceUsersEntity"/>
+        <mapping resource="com/ssau/typingTutor/server/entities/EntitySourceUsersEntity.hbm.xml"/>
+        <mapping class="com.ssau.typingTutor.server.entities.EntitySourceZonesEntity"/>
+        <mapping resource="com/ssau/typingTutor/server/entities/EntitySourceZonesEntity.hbm.xml"/>
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>

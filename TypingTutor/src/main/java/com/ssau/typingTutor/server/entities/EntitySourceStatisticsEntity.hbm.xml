@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.ssau.typingTutor.server.entities.EntitySourceStatisticsEntity" table="statistics"
+           schema="typingTutor" catalog="postgres">
+        <id name="id">
+            <column name="id" sql-type="integer"/>
+        </id>
+        <property name="date">
+            <column name="date" sql-type="date" not-null="true"/>
+        </property>
+        <property name="errorsPercent">
+            <column name="errorsPercent" sql-type="double precision" precision="-1" not-null="true"/>
+        </property>
+        <property name="elapsedTime">
+            <column name="elapsedTime" sql-type="double precision" precision="-1" not-null="true"/>
+        </property>
+        <property name="isSuccess">
+            <column name="IsSuccess" sql-type="boolean" not-null="true"/>
+        </property>
+        <property name="averageSpeed">
+            <column name="averageSpeed" sql-type="double precision" precision="-1" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
